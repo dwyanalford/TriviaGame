@@ -1,0 +1,33 @@
+body {
+	background-image: url("../images/african-landscape.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+#triviaTitle {
+	color: #fff;
+	text-align: center;
+}
+#triviaTitle h1 {
+	font-family: 'Indie Flower', cursive;
+	font-size: 50px;
+	padding-top: 50px;
+}
+/*div that contains all information from javascript*/
+#timeDiv, #bottomDiv {
+	background-color: #fff;
+	opacity: 0.55;
+	color: #000;
+	text-align: center;
+	padding: 15px;
+}
+#inputDiv {
+	background-color: #fff;
+	opacity: 0.55;
+	color: #000;
+	padding: 15px;
+}
+/*space around all buttons*/
+.space {
+	padding: 15px 20px;
+	font-size: 25px;
+}

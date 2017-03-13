@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trivia Game</title>
+	<!-- add stylesheets -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- add jquery -->
+	<script
+  src="http://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  	<script type="text/javascript" src="assets/javascript/app.js"></script>
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div id="mainFrame" class="col-md-8">
+			<div id="triviaTitle" class="row">
+				<h1><span>Do you know Africa?</span> Trivia Game</h1>
+			</div>
+			<div id="timeDiv" class="row"></div>
+			<div id="inputDiv" class="row">
+				<form>
+				 <div class="form-group">
+				  <label id="question1" for="question1">Which African country is the largest by area?</label><br>
+				  <input type="radio" class="largest" id="1a" value="sudan">&nbsp;The Sudan<br>
+				  <input type="radio" class="largest" id="1b" value="safrica">&nbsp;South Africa<br>
+				  <input type="radio" class="largest" id="1c" value="algeria">&nbsp;Algeria<br>
+				</div>
+				<div class="form-group">
+				  <label id="question2" for="question2">Which African country has the highest population?</label><br>
+				  <input type="radio" name="highPop" id="2a" value="ethiopia">&nbsp;Ethiopia<br>
+				  <input type="radio" name="highPop" id="2b" value="nigeria">&nbsp;Nigeria<br>
+				  <input type="radio" name="highPop" id="2c" value="egypt">&nbsp;Egypt<br>
+				</div>
+				</form>
+			</div>
+			<div id="bottomDiv" class="row">   
+				<button onclick="done()" type='button' id="doneButton" class='btn btn-primary space'>DONE</button>
+				</div>
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+	<div class="row"></div>
+</body>
+</html>
