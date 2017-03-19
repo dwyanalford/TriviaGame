@@ -5,6 +5,7 @@ var unanswered = 0;
 
 var count = 0;
 
+// function to evaluate which button the user checked and compare it to answer
 function checkAnswer(){
 	if ($("#1c").is(":checked")){
 		correctAnswers++;
@@ -17,7 +18,35 @@ function checkAnswer(){
 	}
 	else {
 		unanswered++;
+		console.log(unanswered);
 	}
+	if ($("#2b").is(":checked")){
+		correctAnswers++;
+	}
+	else if($("#2c").is(":checked")) {
+		incorrect++;
+	}
+	else if($("#2a").is(":checked")) {
+		incorrect++;
+	}
+	else {
+		unanswered++;
+		console.log(unanswered);
+	}
+	if ($("#3b").is(":checked")){
+		correctAnswers++;
+	}
+	else if($("#3a").is(":checked")) {
+		incorrect++;
+	}
+	else if($("#3c").is(":checked")) {
+		incorrect++;
+	}
+	else {
+		unanswered++;
+		console.log(unanswered);
+	}
+	// what will happen on the web page once the check is completed above
 	$("#timeDiv").hide();
 	$("#inputDiv").html("<h1>ALL DONE..</h1><h3>Final Score</h3><br/><p>Correct Answers: " + correctAnswers + "</p><br><p>Wrong Answers: " + incorrect + "</p><br><p>Unanswered: " + unanswered + "</p>");
 
@@ -32,68 +61,35 @@ $(document).ready(function(){
 	$("#inputDiv").hide();
 
 	$(startButton).click(function(){	
-	var count=4;
-	var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
-	function timer(){
-		count--;
-		console.log(count);
-		console.log("inside the timer function");
-	
-	
-	// fires when the done button is clicked
+	var count = 25;
+	var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
+
+		// this event fires when the #donebutton is clicked
 		$("#doneButton").on('click', function(){
+			console.log("doneButton executed");
 			clearInterval(counter); 
 			checkAnswer();
-			// $("#timeDiv").hide();
-			// $("#inputDiv").html("<h1>ALL DONE..</h1><h3>Final Score</h3><br/><p>Correct Answers: " + correctAnswers + "</p><br><p>Wrong Answers: " + incorrect + "</p>");
-
 		})
 
-		if (count === 0){
-			console.log("This the count " + count);
-			clearInterval(counter); // stops the countdown at 0, otherwise continue with minus number
-			checkAnswer();
-			// $("#timeDiv").hide();
-			// $("#inputDiv").html("<h1>ALL DONE..</h1><h3>Final Score</h3><br/><p>Correct Answers: " + correctAnswers + "</p><br><p>Wrong Answers: " + incorrect + "</p>");
-		}	
-		else {
-			$("#inputDiv").show();
-		}
-		$("#timeDiv").html("Time Remaining: " + count + " seconds"); 
+		function timer(){
+			count--;
+			console.log(count);
+			console.log("inside the timer function");
 		
-	}
-});	
+			if (count === 0){
+				console.log("This the count " + count);
+				clearInterval(counter); // stops the countdown at 0, otherwise continue with minus number
+				checkAnswer();
+			}	
+			else {
+				$("#inputDiv").show();
+			}
+			$("#timeDiv").html("Time Remaining: " + count + " seconds"); 
+		}
 
-
-	// function checkAnswer(){
-	// 	if ($("#1c:checked")){
-	// 			correctAnswers++;
-	// 			console.log("yes this is the correct answer");
-	// 		}
-	// 		else {
-	// 			incorrect++;
-	// 			// console.log(incorrect);
-	// 			console.log("No incorrect");
-	// 		}
-	// }
-
-	// // function submitButton(){
-	// $("#doneButton").on('click', function(){
-	// 	clearInterval(counter); 
-	// 	if (answer1.checked === true){
-	// 		correctAnswers++;
-	// 		console.log(correctAnswers);
-	// 	}
-	// 	else {
-	// 		incorrect++;
-	// 		console.log(incorrect);
-	// 	}
-	// 	// clearInterval(counter); 
-	// 	// count = 0;
-	// 	// $("#inputDiv").html("<h1>ALL DONE!!</h1><br><p>Correct Answers: " + correctAnswers + "</p><br><p>Wrong Answers: " + incorrect + "</p>");
-	// 	// $("#timeDiv").hide();
-	// })
 	});	
+
+});	
 
 
 	
