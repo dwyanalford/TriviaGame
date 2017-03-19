@@ -4,15 +4,9 @@
 	<title>Trivia Game</title>
 	<!-- add stylesheets -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<!-- add jquery -->
-	<script
-  src="http://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-  	<script type="text/javascript" src="assets/javascript/app.js"></script>
+	
 </head>
 <body>
 	<div class="row">
@@ -23,27 +17,46 @@
 			</div>
 			<div id="timeDiv" class="row"></div>
 			<div id="inputDiv" class="row">
-				<form>
-				 <div class="form-group">
-				  <label id="question1" for="question1">Which African country is the largest by area?</label><br>
-				  <input type="radio" class="largest" id="1a" value="sudan">&nbsp;The Sudan<br>
-				  <input type="radio" class="largest" id="1b" value="safrica">&nbsp;South Africa<br>
-				  <input type="radio" class="largest" id="1c" value="algeria">&nbsp;Algeria<br>
-				</div>
-				<div class="form-group">
-				  <label id="question2" for="question2">Which African country has the highest population?</label><br>
-				  <input type="radio" name="highPop" id="2a" value="ethiopia">&nbsp;Ethiopia<br>
-				  <input type="radio" name="highPop" id="2b" value="nigeria">&nbsp;Nigeria<br>
-				  <input type="radio" name="highPop" id="2c" value="egypt">&nbsp;Egypt<br>
-				</div>
+				<form method="POST" action="">
+				 <div id="q1" class="form-group">
+				  <label id="question1" for="radio1" class="radio-inline">
+				  	<h4>Which African country is the largest by area?</h4>
+				  </label><br>
+				  <input type="radio" name="radio1" id="1a" value="The Sudan" class="wrong">&nbsp;The Sudan&nbsp;&nbsp;
+				  <input type="radio" name="radio1" id="1b" value="South Africa" class="wrong">&nbsp;South Africa&nbsp;&nbsp;
+				  <input type="radio" name="radio1" id="1c" value="Algeria" class="correct">&nbsp;Algeria
+				</div><br>
+				<div id="q2" class="form-group">
+				  <label id="question2" for="radio2" class="radio-inline">
+				  	<h4>Which African country has the highest population?</h4>
+				  </label><br>
+				  <input type="radio" name="radio2" id="2a" value="Ethiopia" class="wrong">&nbsp;Ethiopia&nbsp;&nbsp;
+				  <input type="radio" name="radio2" id="2b" value="Nigeria" class="correct">&nbsp;Nigeria&nbsp;&nbsp;
+				  <input type="radio" name="radio2" id="2c" value="Egypt" class="wrong">&nbsp;Egypt
+				</div><br>
+				<div id="q3" class="form-group">
+				  <label id="question3" for="radio3" class="radio-inline">
+				  	<h4>Which African country mines the most amount of Gold?</h4>
+				  </label><br>
+				  <input type="radio" name="radio3" id="3a" value="Eritrea" class="wrong">&nbsp;Eritrea&nbsp;&nbsp;
+				  <input type="radio" name="radio3" id="3b" value="South Africa" class="correct">&nbsp;South Africa&nbsp;&nbsp;
+				  <input type="radio" name="radio3" id="3c" value="Ghana" class="wrong">&nbsp;Ghana
+				</div><br>
+				<input type="button" id="doneButton" class='btn btn-primary space' value="DONE"></input>
 				</form>
 			</div>
-			<div id="bottomDiv" class="row">   
-				<button onclick="done()" type='button' id="doneButton" class='btn btn-primary space'>DONE</button>
-				</div>
 		</div>
 		<div class="col-md-2"></div>
 	</div>
 	<div class="row"></div>
+
+<!-- // add Jquery -->	
+<script
+  src="http://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>	
+	
+  	<script type="text/javascript" src="assets/javascript/app.js"></script>
+
 </body>
 </html>
